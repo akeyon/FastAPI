@@ -24,7 +24,7 @@ async def create_item(item: Item):
 async def root():
     return {"greeting": "Hello, World edited!", "message": "Welcome to FastAPI!"}
     
-app.post("/send-email/")
+@app.post("/send-email/")
 async def send_email(Email: str, Name: str):
     # sender_email = "onorah17@gmail.com"
     # sender_password = "adty gdjr ouug gihs"
