@@ -1,6 +1,6 @@
 from fastapi import FastAPI,HTTPException
 from pydantic import BaseModel
-from emailTemplate import emailTemplate
+from emailTemplate import email_template 
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -46,7 +46,7 @@ async def send_email(Email: str, Name: str):
     # msg.attach(MIMEText(message, 'plain'))
     print("Recepient log.....",Email)
     # Add HTML content to the email
-    html_content = emailTemplate.email_template.replace('[Participant\'s Name]', Name).replace('[Event Date]', 'April 14, 2024').replace('[Event Time]', '9:00 AM').replace('[Event Location]', 'Playstreet Lavington,Mugumo Road').replace('[Link to Event Page]', 'https://www.example.com/event')
+    html_content = email_template.replace('[Participant\'s Name]', Name).replace('[Event Date]', 'April 14, 2024').replace('[Event Time]', '9:00 AM').replace('[Event Location]', 'Playstreet Lavington,Mugumo Road').replace('[Link to Event Page]', 'https://www.example.com/event')
     msg.attach(MIMEText(html_content, 'html'))
     try:
         # Connect to Gmail's SMTP server
