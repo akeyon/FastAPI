@@ -28,7 +28,7 @@ async def root():
 async def send_email(Email: str, Name: str):
     # sender_email = "onorah17@gmail.com"
     # sender_password = "adty gdjr ouug gihs"
-    subject="Thank you! Your registration for the Tuwatunze event is confirmed."
+    subject="Thank you! Your registration for the Tuwatunze Open Day is confirmed."
     # message="Dear "+ Name+" ,"" \n Welcome to Tuwatunze!. We are thrilled to have you join us for this exciting event\n Here are a few details to help you prepare:\nEvent Date: 13th April 2024 \nEvent Time: [Event Time]Event Address:Playstreet Lavington,Mugumo Road\nPlease feel free to reach out if you have any questions or need further information. We look forward to seeing you there!\nBest regards,\nEmily Githae\nTuwatunze Event organiser\n7000000000"
     
     # sender_email = "norah@marathonxp.com"
